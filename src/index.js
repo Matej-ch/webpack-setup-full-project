@@ -4,4 +4,11 @@ const spell = {
     aoe: false
 }
 
+const aoeSpell = {
+    ...spell,
+    aoe: true
+}
+
 console.log(spell);
+
+console.log(aoeSpell);
