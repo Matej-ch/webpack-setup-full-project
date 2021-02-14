@@ -1,13 +1,13 @@
 import {useState} from 'react'
 
-const spell = {
+const fireSpell = {
     name: 'Fireball',
     strength: 5,
     aoe: 'no'
 }
 
-const aoeSpell = {
-    ...spell,
+const aoeFireSpell = {
+    ...fireSpell,
     aoe: 'yes',
 }
 
@@ -19,8 +19,8 @@ const Spells = () => {
         <h3>
             Current spell
         </h3>
-        <button onClick={() => setSpell(spell)}>Fire spell</button>
-        <button onClick={() => setSpell(aoeSpell)}>Aoe fire spell</button>
+        <button onClick={() => setSpell(fireSpell)}>Fire spell</button>
+        <button onClick={() => setSpell(aoeFireSpell)}>Aoe fire spell</button>
 
         <ul>
             {Object.keys(spell).map((spellAttribute) => (

@@ -9,6 +9,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: "asset/resource"
+            },
+            {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
@@ -17,7 +21,13 @@ module.exports = {
             },
             {
                 test: /\.(s[ac]|c)ss$/i,
-                use: [MiniCssExtractPlugin.loader,"css-loader","postcss-loader","sass-loader"],
+
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {publicPath: "" }
+                    },
+                    "css-loader","postcss-loader","sass-loader"],
             }
         ]
     },
@@ -26,6 +36,10 @@ module.exports = {
 
     resolve: {
         extensions: [".js",".jsx"]
+    },
+
+    output: {
+        assetModuleFilename: "images/[hash][ext][query]"
     },
 
     devServer: {
