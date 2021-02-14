@@ -1,3 +1,5 @@
+import "./styles/style.scss"
+
 const spell = {
     name: 'Fireball',
     strength: 5,

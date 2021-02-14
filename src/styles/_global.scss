@@ -1,0 +1,11 @@
+@use "variables";
+
+body {
+  background-color: variables.$bg;
+  color: var(--text);
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
