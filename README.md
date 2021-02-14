@@ -16,3 +16,5 @@
 `npm i react react-dom` adding react functionality
 
 `npm i -D @babel/preset-react` transpile react jsx
+
+`npm i -D html-webpack-plugin` for html file generation
