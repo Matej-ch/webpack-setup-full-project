@@ -12,3 +12,7 @@
 `npm i -D postcss postcss-preset-env postcss-loader` polyfills , interoperability between browsers
 
 `file .browserlistrc` is for setting browser interoperability
+
+`npm i react react-dom` adding react functionality
+
+`npm i -D @babel/preset-react` transpile react jsx
